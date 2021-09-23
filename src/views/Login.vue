@@ -18,6 +18,7 @@
     <v-card-actions>
         <v-btn text color="grey"> registrar </v-btn>
         <v-btn text color="black"> iniciar sesión </v-btn>
+        <v-btn text color="black"> municipios </v-btn>
     </v-card-actions>
     </v-card>
 </template>
