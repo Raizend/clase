@@ -12,19 +12,33 @@
             label="contraseña"
             placeholder="contraseña"
             outlined
+            type="password"
         ></v-text-field>
         </v-form>
     </v-card-text>
     <v-card-actions>
         <v-btn text color="grey"> registrar </v-btn>
-        <v-btn text color="black"> iniciar sesión </v-btn>
+        <v-btn text color="black" @click="login"> iniciar sesión </v-btn>
         <v-btn text color="black"> municipios </v-btn>
     </v-card-actions>
     </v-card>
 </template>
 
 <script>
-export default {};
+export default {
+    data: ()=>{
+        return{
+
+        }
+    },
+    methods: {
+        login() {
+            console.log("verificando credenciales....");
+            this.$router.push('/home');
+        }
+    }
+
+};
 </script>
 
 <style>
