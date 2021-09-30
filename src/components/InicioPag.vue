@@ -1,5 +1,23 @@
 <template>
   <v-container>
+  <v-row
+    align="center"
+    justify="end"
+  >
+    <v-btn
+      color="primary"
+      elevation="10"
+      rounded
+      text @click="login"
+    ><h3>Iniciar Sesión</h3></v-btn>
+    <v-btn
+      color="primary"
+      elevation="10"
+      rounded
+      text @click="registro"
+    ><h3>Registrar</h3></v-btn>
+  </v-row>
+  
   <!--Plantilla Servicios-->
   <div id="servicios">
     
@@ -517,8 +535,21 @@
       }
       
     },
-    
 
+    methods: {
+        login(){
+            console.log("Verificando credenciales");
+            //Redirigir al login
+            this.$router.push('/login');
+        },
+        registro(){
+            console.log("Verificando credenciales");
+            //Redirigir al registro
+            this.$router.push('/registro');
+        },
+
+    }
+    
   }
   
 

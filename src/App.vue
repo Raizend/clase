@@ -35,13 +35,19 @@
         <v-btn icon>
           <v-icon>mdi-dots-vertical</v-icon>
         </v-btn>
-
+        
         <template v-slot:extension>
-          <v-tabs align-with-title>
-            <v-tab>Registrar</v-tab>
-            <v-tab>Iniciar Sesion</v-tab>
-            
-          </v-tabs>
+          <v-container>
+            <v-row
+                align="center"
+                justify="end"
+                margin
+              >
+              <v-btn icon @click="home">
+                <v-icon x-large>mdi-home-account</v-icon>
+              </v-btn>
+            </v-row>
+          </v-container>
         </template>
       </v-app-bar>
       <v-sheet
@@ -65,5 +71,12 @@ export default {
   data: () => ({
     //
   }),
+
+    methods: {
+        home(){
+            //Redirigir al home
+            this.$router.push('/home');
+        },
+    }
 };
 </script>

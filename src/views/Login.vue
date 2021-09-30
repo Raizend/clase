@@ -36,8 +36,8 @@ export default {
     methods: {
         login(){
             console.log("Verificando credenciales");
-            //Redirigir al home
-            this.$router.push('/home');
+            //Redirigir al Tabla de Registro
+            this.$router.push('/tablaregistro');
         },
         registro(){
             console.log("Verificando credenciales");
