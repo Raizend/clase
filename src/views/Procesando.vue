@@ -1,5 +1,5 @@
 <template>
-    <h1>esto es una prueba con el cambio de nombre</h1>
+  <h1>Estamos trabajando en esto...</h1>
 </template>
 
 <script>

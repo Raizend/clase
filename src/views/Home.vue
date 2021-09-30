@@ -1,15 +1,16 @@
 <template>
-  <personajes/>
+  <inicio-pag/>
 </template>
 
 <script>
-import Personajes from '../components/Personajes.vue'
-
+  
+  import InicioPag from '../components/InicioPag.vue'
+  
   export default {
-    name: 'home',
-
+    name: 'Home',
+    
     components: {
-      Personajes,      
+      InicioPag,
     },
   }
 </script>
