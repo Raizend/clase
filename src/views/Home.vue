@@ -1,15 +1,17 @@
 <template>
-  <hello-world />
+  <inicio-pag/>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
-
+  //import HelloWorld from '../components/HelloWorld'
+  import InicioPag from '../components/InicioPag.vue'
+  
   export default {
     name: 'Home',
-
+    
     components: {
-      HelloWorld,
+      //HelloWorld,
+      InicioPag,
     },
   }
 </script>
