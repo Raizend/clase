@@ -38,7 +38,7 @@ const routes = [
   },
   {
     path: '/tablaregistro',
-    name:'Registro',
+    name:'TablaRegistro',
     component:()=> import('../views/TablaRegistro.vue')
 
   },

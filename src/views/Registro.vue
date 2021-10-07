@@ -1,11 +1,13 @@
 <template>
-  <v-card id="card-sign" class="mx-auto" max-width="1000" >
+  <v-card id="card-sign" class="mx-auto" max-width="1000">
     <v-img
       src=" https://static.vecteezy.com/system/resources/previews/000/110/116/original/national-pet-week-dog-vectors.jpg"
       height="270px"
     ></v-img>
 
-    <v-card-title id="card-title" class="text-h4 text--primary"> Regístrate </v-card-title>
+    <v-card-title id="card-title" class="text-h4 text--primary">
+      Regístrate
+    </v-card-title>
 
     <v-form id="formulario">
       <v-container>
@@ -132,36 +134,17 @@
 
     <div class="text-center">
       <v-dialog v-model="dialog" width="600">
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn color="green" dark v-bind="attrs" v-on="on">
-            Registrar
-          </v-btn>
-        </template>
-
         <br />
         <br />
 
         <v-card>
-          <v-card-title class="text-h5 green lighten-2">
-            Registro Satisfactorio!
-          </v-card-title>
-
-          <v-card-text class="text-h6 text--primary">
-            Tu registro se ha hecho de forma satisfactoria, ya puedes empezar a
-            usar todos los beneficios que tenemos para ti!!!
-          </v-card-text>
-
           <v-divider></v-divider>
-
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="primary" text @click="dialog = false"> Cerrar </v-btn>
-          </v-card-actions>
         </v-card>
       </v-dialog>
     </div>
     <v-card-actions>
-        <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-btn color="green" @click="tablaregistro"> Registrar </v-btn>
       <v-btn rounded color="grey" light @click="home"> Página Principal </v-btn>
       <v-btn rounded color="grey" light @click="login"> Iniciar Sesión </v-btn>
     </v-card-actions>
@@ -179,41 +162,44 @@ export default {
     ],
   }),
 
-  data() {
-    return {
-      dialog: false,
-    };
-  },
+  //data() {
+  //  return {
+  //    dialog: false,
+  // };
+  //},
 
   methods: {
-        login(){
-            console.log("Verificando credenciales");
-            //Redirigir al home
-            this.$router.push('/login');
-        },
-        home(){
-            console.log("Verificando credenciales");
-            //Redirigir al home
-            this.$router.push('/home');
-        }
-    }
+    login() {
+      console.log("Verificando credenciales");
+      //Redirigir al home
+      this.$router.push("/login");
+    },
+    home() {
+      console.log("Verificando credenciales");
+      //Redirigir al home
+      this.$router.push("/home");
+    },
+    tablaregistro() {
+      console.log("Verificando credenciales");
+      //Redirigir al home
+      this.$router.push("/tablaregistro");
+    },
+  },
 };
 </script>
 
 <style>
-
-#card-sign{
+#card-sign {
   margin-top: 5rem;
   margin-block-end: 5rem;
   border-color: brown;
 }
 
-#formulario{
-    border-color: brown;
+#formulario {
+  border-color: brown;
 }
 
-#card-title{
-    color: rgb(22, 6, 37);
+#card-title {
+  color: rgb(22, 6, 37);
 }
-
 </style>
