@@ -14,7 +14,7 @@
       v-model="name"
       :error-messages="nameErrors"
       :counter="25"
-      label="Registrador"
+      label="Veterinario"
       required
       @input="$v.name.$touch()"
       @blur="$v.name.$touch()"
