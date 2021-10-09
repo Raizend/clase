@@ -1,6 +1,8 @@
 <template>
     <v-container>
-        <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black" id="titulo4">Conoce nuestro equipo de trabajo</h1> </v-card>
+        <v-divider></v-divider>
+    <h2 id="titulo4">Conoce nuestro equipo de trabajo</h2>
+    <v-divider></v-divider>
         <div id="team">
             
             <v-card color="#CCE5FF">
@@ -29,9 +31,6 @@
 
                         <v-card-actions>
                         
-
-                        
-
                         <v-btn
                             icon
                             @click="show = !show"
@@ -44,7 +43,7 @@
                         <div v-show="show">
                             <v-divider></v-divider>
 
-                            <v-card-text text-align= justify>
+                            <v-card-text >
                             Hola soy Julián Pinzón, soy estudiante de Pedagogía en la Escuela, Normal Superior de Charala, me gusta la programar, soy estudiante en formcion del programa Mision Tic 2022 en con venio con la UTP de Pereira. Soy bueno para desarrollar cosas con estática, tener algunas veces la iniciativa y divertirme en mis tiempos libres pasándola bien.
                             </v-card-text>
                         </div>
@@ -71,12 +70,7 @@
                         </v-card-subtitle>
 
                         <v-card-actions>
-                        <v-btn
-                            color="orange lighten-2"
-                            text
-                        >
-                            Explorar
-                        </v-btn>
+                        
 
                         <v-spacer></v-spacer>
 
@@ -119,12 +113,7 @@
                         </v-card-subtitle>
 
                         <v-card-actions>
-                        <v-btn
-                            color="orange lighten-2"
-                            text
-                        >
-                            Explorar
-                        </v-btn>
+                        
 
                         <v-spacer></v-spacer>
 
@@ -170,12 +159,7 @@
                         </v-card-subtitle>
 
                         <v-card-actions>
-                        <v-btn
-                            color="orange lighten-2"
-                            text
-                        >
-                            Explorar
-                        </v-btn>
+                        
 
                         <v-spacer></v-spacer>
 
@@ -218,12 +202,7 @@
                         </v-card-subtitle>
 
                         <v-card-actions>
-                        <v-btn
-                            color="orange lighten-2"
-                            text
-                        >
-                            Explorar
-                        </v-btn>
+                        
 
                         <v-spacer></v-spacer>
 
@@ -269,6 +248,6 @@ export default {
     padding-top: 2%;
 }
 #titulo4{
-    color:white;
+    color: #404040;
 }
 </style>

@@ -7,20 +7,20 @@
         dark
         shrink-on-scroll
         prominent
-        src="https://cdn.pixabay.com/photo/2017/04/11/15/55/animals-2222007_960_720.jpg"
-        fade-img-on-scroll
+        src="https://www.lawrenceburgvetclinic.com/assets/sub-banners/isolated-multiple-pet-banner.jpg"
+        
         
       >
         <template v-slot:img="{ props }">
           <v-img
             v-bind="props"
-            gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+
           ></v-img>
         </template>
+        <!--gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"-->
+        
 
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-        <v-toolbar-title><h2>Control de Vacunación para Animales Domésticos</h2></v-toolbar-title>
+        <v-toolbar-title id="titulo"><h2>Control de Vacunación <br> para Animales Domésticos</h2></v-toolbar-title>
         
         <v-spacer></v-spacer>
 
@@ -53,7 +53,7 @@
       <v-sheet
         
       >
-        <v-container style="height: 250px;"></v-container>
+        <v-container style="height: 300px;"></v-container>
       </v-sheet>
     </v-card>
 
@@ -80,3 +80,9 @@ export default {
     }
 };
 </script>
+
+<style>
+#titulo{
+color: whitesmoke;
+}
+</style>

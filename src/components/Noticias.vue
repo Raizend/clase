@@ -1,12 +1,7 @@
 <template>
-    <v-container>
-      <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black" id="titulo3">Noticias</h1> </v-card>
-        <div id ="news">
-            <v-card height="550" color="#CCE5FF">
-            <v-responsive :aspect-ratio="16/9">
-                <v-card-text>
-                
-                <v-carousel>
+
+<v-conteiner><v-div><v-divider></v-divider>
+    <v-divider></v-divider><v-carousel id="carrusel" hide-delimiters cycle height="350px">
                     <v-carousel-item
                     v-for="(item,i) in items"
                     :key="i"
@@ -14,13 +9,9 @@
                     reverse-transition="fade-transition"
                     transition="fade-transition"
                     ></v-carousel-item>
-                </v-carousel>
-
-                </v-card-text>
-            </v-responsive>
-            </v-card>
-        </div>
-    </v-container>
+                </v-carousel></v-div></v-conteiner>
+    
+   
 </template>
 
 <script>
@@ -34,7 +25,7 @@ export default {
             
           },
           {
-            src: 'https://www.eltelegrafo.com.ec/media/k2/items/cache/8ce250f1c8b420459a99c897b9fae3f9_XL.jpg',
+            src: 'https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
           },
           {
             src: 'https://www.hogarmania.com/archivos/201609/perros-vacuna-rabia-1280x720x80xX.jpg',
@@ -50,11 +41,8 @@ export default {
 </script>
 
 <style>
-#news{
-  padding-top: 2%;
+#carrusel{
+  margin-top: 3rem;
+  
 }
-#titutlo3{
-  color: white;
-}
-
 </style>

@@ -1,8 +1,10 @@
 <template>
   <v-container>
-    <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black" id="titulo1">Información de tu interés</h1> </v-card>
+    <v-divider></v-divider>
+    <h2 id="titulo1">Información de tu interés</h2>
+    <v-divider></v-divider>
     <div id="services">
-      <v-card height="300" color="#CCE5FF">
+      <v-card height="300" color="#E0F2F1">
         <v-responsive :aspect-ratio="16 / 9">
           <v-card-text>
             <v-layout>
@@ -18,7 +20,7 @@
                   <v-card-title > Tipos de vacunas </v-card-title>
 
                   <v-card-actions>
-                    <v-btn rounded x-large block color="#4DB6AC" >
+                    <v-btn outlined rounded x-large color="#4DB6AC" >
                       Quiero saber más!
                     </v-btn>
                   </v-card-actions>
@@ -32,11 +34,11 @@
                     height="100px"
                   ></v-img>
 
-                  <v-card-title> ¡Registrate aquí!</v-card-title>
+                  <v-card-title>Información que te nutre </v-card-title>
 
                   <v-card-actions>
-                    <v-btn rounded x-large block color="#4DB6AC" @click="tablaregistro" id="titulo2">
-                      Quiero saber más!
+                    <v-btn rounded outlined x-large color="#4DB6AC" @click="tablaregistro" id="titulo2">
+                       Quiero saber más!
                     </v-btn>
                   </v-card-actions>
                 </v-card>
@@ -49,11 +51,11 @@
                     height="100px"
                   ></v-img>
 
-                  <v-card-title> Información de tu interés </v-card-title>
+                  <v-card-title>Certificado de vacunación </v-card-title>
 
                   <v-card-actions>
-                    <v-btn rounded x-large block color="#4DB6AC">
-                      Quiero saber más!
+                    <v-btn rounded outlined x-large color="#4DB6AC">
+                     Descargar!
                     </v-btn>
                   </v-card-actions>
                 </v-card>
@@ -87,7 +89,7 @@ export default {
   padding-top: 2%;
 }
 #titulo1 {
-  color: white;
+  color: #404040;
 }
 #titulo2 {
   color: white;

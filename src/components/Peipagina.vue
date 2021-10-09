@@ -16,7 +16,7 @@
                 </v-img>
                 </article>
             <article>
-                <h2 ><u class="footer-section_title">Horarios de Atensión</u></h2>
+                <h2 ><u class="footer-section_title">Horarios de Atención</u></h2>
                 <p>Lunes - Viernes: 08:00am - 07:00pm</p>
                 <p>Sabado: 08:00am - 12:00pm</p>
                 
@@ -32,7 +32,7 @@ export default {
 
 <style>
 #footer{
-    background-color: #311B92;
+    background-color: #404040;
     display: flex;
     justify-content: space-evenly;
     color: white;
