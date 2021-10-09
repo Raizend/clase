@@ -1,8 +1,6 @@
 <template>
-  <div>
-      <h1>Certificado y registro de vacunación</h1>
-      <hr/>
-        <certificado/>
+  <div>git 
+        <certificado />
   </div>
 </template>
 
@@ -15,10 +13,6 @@ export default {
 </script>
 
 <style>
-h1{
-    margin-top:8vh;
-    text-align: center;
-    color:#00b347;
-}
+
 
 </style>
