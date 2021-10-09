@@ -28,11 +28,9 @@
                         </v-card-subtitle>
 
                         <v-card-actions>
-                        <v-btn x-large block color="#4DB6AC" >
-                      Quiero saber más!
-                    </v-btn>
+                        
 
-                        <v-spacer></v-spacer>
+                        
 
                         <v-btn
                             icon
