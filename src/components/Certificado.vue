@@ -1,7 +1,7 @@
 <template>
   <v-card id="card" class="mx-auto" max-width="1000">
     <v-img
-      src=" https://static.vecteezy.com/system/resources/previews/000/110/116/original/national-pet-week-dog-vectors.jpg"
+      src="https://media.istockphoto.com/photos/youngogs-and-cats-above-grey-banner-picture-id1131381748?b=1&k=20&m=1131381748&s=170667a&w=0&h=gV3De1A9IfKFRD0rGYKdcrioPQTxZypG49edl8tGKIM="
       height="270px"
     ></v-img>
 
@@ -20,6 +20,14 @@
         @blur="$v.name.$touch()"
       ></v-text-field>
       <v-text-field
+        v-model="propietario"
+        label="Nombre del dueño de la mascota"
+      ></v-text-field>
+      <v-text-field
+        v-model="cedulapropietario"
+        label="Cédula del propietario"
+      ></v-text-field>
+      <v-text-field
         v-model="email"
         :error-messages="emailErrors"
         label="E-mail del dueño de la mascota"
@@ -29,12 +37,7 @@
       ></v-text-field>
       <v-text-field
         v-model="namepet"
-        :error-messages="namepetErrors"
-        :counter="25"
         label="Nombre de la mascota"
-        required
-        @input="$v.namepet.$touch()"
-        @blur="$v.namepet.$touch()"
       ></v-text-field>
       <v-select
         v-model="select"
@@ -47,20 +50,12 @@
       ></v-select>
       <v-select
         v-model="select2"
-        :items2="items2"
-        :error-messages="select2Errors"
+        :items="genero"
         label="Género"
-        required
-        @change="$v.select2.$touch()"
-        @blur="$v.select2.$touch()"
       ></v-select>
       <v-text-field
         v-model="vacuna"
-        :counter="30"
         label="Vacuna"
-        required
-        @input="$v.vacuna.$touch()"
-        @blur="$v.vacuna.$touch()"
       ></v-text-field>
       <v-checkbox
         v-model="checkbox"
@@ -98,11 +93,9 @@ export default {
 
   validations: {
     name: { required, maxLength: maxLength(25) },
-    namepet: { required },
     vacuna: { required },
     email: { required, email },
     select: { required },
-    select2: { required },
     checkbox: {
       checked(val) {
         return val;
@@ -117,9 +110,11 @@ export default {
     select: null,
     select2: null,
     items: ["Perro", "Gato", "Otro"],
-    items2: ["Macho", "Hembra"],
+    genero: ['Macho', 'Hembra'],
     vacuna: "",
     checkbox: false,
+    propietario:"",
+    cedulapropietario:"",
   }),
 
   computed: {
@@ -134,12 +129,6 @@ export default {
       const errors = [];
       if (!this.$v.select.$dirty) return errors;
       !this.$v.select.required && errors.push("Mascota es requerido");
-      return errors;
-    },
-    select2Errors() {
-      const errors = [];
-      if (!this.$v.select2.$dirty) return errors;
-      !this.$v.select2.required && errors.push("Género es requerido");
       return errors;
     },
     nameErrors() {
@@ -157,13 +146,6 @@ export default {
       !this.$v.email.required && errors.push("E-mail is required");
       return errors;
     },
-    namepetErrors() {
-      const errors = [];
-      if (!this.$v.namepet.$dirty) return errors;
-      !this.$v.namepet.maximoLength &&
-        errors.push("Nombre supera los 25 caracteres");
-      !this.$v.namepet.required && errors.push("Es requerido un nombre");
-    },
   },
 
   methods: {
@@ -179,6 +161,8 @@ export default {
       this.select2 = null;
       this.checkbox = false;
       this.vacuna = "";
+      this.propietario="";
+      this.cedulapropietario="";
     },
   },
 };
@@ -203,6 +187,7 @@ export default {
 }
 
 h3{
+  text-anchor: middle;
   color: #00994c;
 }
 </style>

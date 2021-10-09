@@ -16,7 +16,6 @@
                     height="100px"
                   >
                   </v-img>
-
                   <v-card-title > Tipos de vacunas </v-card-title>
 
                   <v-card-actions>
@@ -30,15 +29,13 @@
               <v-flex>
                 <v-card class="mx-auto" max-width="344" height="260">
                   <v-img
-                    src="https://media.istockphoto.com/photos/coronavirus-picture-id1305856876?b=1&k=20&m=1305856876&s=170x170&h=GzXr7BF7Nork7Dl52Cwd5gcmTFUl2IUrf_ULACBShj8="
+                    src="https://www.diariolibre.com/binrepository/1970x1024/0c0/0d0/none/10904/WXLC/preparava-vacuna-covdi-sinovac-en-pucmm-22042021-orlando-barria-efe-16243390-20210423224222_16511082_20210531152540.jpg"
                     height="100px"
                   ></v-img>
-
-                  <v-card-title>Información que te nutre </v-card-title>
-
+                  <v-card-title> Haz tu certificado de vacunación! </v-card-title>
                   <v-card-actions>
                     <v-btn rounded outlined x-large color="#4DB6AC" @click="tablaregistro" id="titulo2">
-                       Quiero saber más!
+                      Descargar!
                     </v-btn>
                   </v-card-actions>
                 </v-card>
@@ -51,11 +48,11 @@
                     height="100px"
                   ></v-img>
 
-                  <v-card-title>Certificado de vacunación </v-card-title>
+                  <v-card-title> Información de tu interés </v-card-title>
 
                   <v-card-actions>
                     <v-btn rounded outlined x-large color="#4DB6AC">
-                     Descargar!
+                      Quiero saber más!
                     </v-btn>
                   </v-card-actions>
                 </v-card>
