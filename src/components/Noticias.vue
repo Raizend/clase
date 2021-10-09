@@ -1,6 +1,6 @@
 <template>
     <v-container>
-      <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black">Noticias</h1> </v-card>
+      <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black" id="titulo3">Noticias</h1> </v-card>
         <div id ="news">
             <v-card height="550" color="#CCE5FF">
             <v-responsive :aspect-ratio="16/9">
@@ -52,6 +52,9 @@ export default {
 <style>
 #news{
   padding-top: 2%;
+}
+#titutlo3{
+  color: white;
 }
 
 </style>
