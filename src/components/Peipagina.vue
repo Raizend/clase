@@ -1,5 +1,4 @@
 <template>
-    <v-container>
         <div id="footer">
             <article>
                 <h2 ><u class="footer-section_title">Nosotros</u></h2>
@@ -23,7 +22,6 @@
                 
             </article>
         </div>
-    </v-container>
 </template>
 
 <script>

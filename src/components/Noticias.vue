@@ -1,8 +1,8 @@
 <template>
     <v-container>
-        <h2>Noticias</h2>
+      <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black">Noticias</h1> </v-card>
         <div id ="news">
-            <v-card height="550">
+            <v-card height="550" color="#CCE5FF">
             <v-responsive :aspect-ratio="16/9">
                 <v-card-text>
                 

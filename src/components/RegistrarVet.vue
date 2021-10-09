@@ -1,10 +1,10 @@
 <template>
   <v-card id="card-sign" class="mx-auto" max-width="1000" height="1000" :elevation="30">
-    <v-img height="270px" class="green--text align-end"
-      src="https://thumbs.dreamstime.com/b/group-domestic-pets-over-white-banner-row-hanging-blank-image-sized-to-fit-popular-social-media-photo-placeholder-64552469.jpg"
+    <v-img height="300px" class="green--text align-end"
+      src="https://prestoncountryclubforpets.com/sites/default/files/banner/dogs-cats-banner.jpg"
       
     >
-    <v-card-title ><h2>Formulario de Registro</h2></v-card-title>
+    <v-card-title ><h1>Formulario de Registro</h1></v-card-title>
     </v-img>
 
     <!--<h1 class="text-center" style="color: #00994c"></h1>-->

@@ -1,9 +1,9 @@
 <template>
     <v-container>
-        <h2>Equipo</h2>
+        <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black">Conoce nuestro equipo de trabajo</h1> </v-card>
         <div id="team">
             
-            <v-card>
+            <v-card color="#CCE5FF">
                 <v-responsive :aspect-ratio="16/9">
                 <v-card-text>
                 
@@ -28,12 +28,9 @@
                         </v-card-subtitle>
 
                         <v-card-actions>
-                        <v-btn
-                            color="orange lighten-2"
-                            text
-                        >
-                            Explorar
-                        </v-btn>
+                        <v-btn x-large block color="#4DB6AC" >
+                      Quiero saber más!
+                    </v-btn>
 
                         <v-spacer></v-spacer>
 

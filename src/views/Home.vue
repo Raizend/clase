@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-container>
     <!--Botones de inicion y registrar--->
     <v-row
@@ -22,9 +23,11 @@
     <servicios/>
     <noticias/>
     <equipo/>
-    <peipagina/>
+    
 
   </v-container>
+  <peipagina/>
+  </div>
 </template>
 
 <script>
