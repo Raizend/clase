@@ -1,80 +1,92 @@
 <template>
-<v-card id="card-sign" class="mx-auto" max-width="1000">
+  <v-card id="card" class="mx-auto" max-width="1000">
     <v-img
       src=" https://static.vecteezy.com/system/resources/previews/000/110/116/original/national-pet-week-dog-vectors.jpg"
       height="270px"
     ></v-img>
 
-    <v-card-title id="card-title" class="text-h4 text--primary">
-      Certificado y registro de vacunación
+    <v-card-title id="card-title" class="text-h4 text--primary" >
+     <h3>Certificado y registro </h3>
     </v-card-title>
 
-  <form id="Tabla">
-    <v-text-field
-      v-model="name"
-      :error-messages="nameErrors"
-      :counter="25"
-      label="Veterinario"
-      required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
-    ></v-text-field>
-    <v-text-field
-      v-model="email"
-      :error-messages="emailErrors"
-      label="E-mail del dueño de la mascota"
-      required
-      @input="$v.email.$touch()"
-      @blur="$v.email.$touch()"
-    ></v-text-field>
-    <v-text-field
-      v-model="namepet"
-      :error-messages="namepetErrors"
-      :counter="25"
-      label="Nombre de la mascota"
-      required
-      @input="$v.namepet.$touch()"
-      @blur="$v.namepet.$touch()"
-    ></v-text-field>
-    <v-select
-      v-model="select"
-      :items="items"
-      :error-messages="selectErrors"
-      label="Mascota"
-      required
-      @change="$v.select.$touch()"
-      @blur="$v.select.$touch()"
-    ></v-select>
-    <v-select
-      v-model="select2"
-      :items2="items2"
-      :error-messages="select2Errors"
-      label="Género"
-      required
-      @change="$v.select2.$touch()"
-      @blur="$v.select2.$touch()"
-    ></v-select>
-    <v-text-field
-      v-model="vacuna"
-      :counter="30"
-      label="Vacuna"
-      required
-      @input="$v.vacuna.$touch()"
-      @blur="$v.vacuna.$touch()"
-    ></v-text-field>
-    <v-checkbox
-      v-model="checkbox"
-      :error-messages="checkboxErrors"
-      label="¿Estas de acuerdo con está información suministrada ?"
-      required
-      @change="$v.checkbox.$touch()"
-      @blur="$v.checkbox.$touch()"
-    ></v-checkbox>
+    <form id="Tabla">
+      <v-text-field
+        v-model="name"
+        :error-messages="nameErrors"
+        :counter="25"
+        label="Veterinario"
+        required
+        @input="$v.name.$touch()"
+        @blur="$v.name.$touch()"
+      ></v-text-field>
+      <v-text-field
+        v-model="email"
+        :error-messages="emailErrors"
+        label="E-mail del dueño de la mascota"
+        required
+        @input="$v.email.$touch()"
+        @blur="$v.email.$touch()"
+      ></v-text-field>
+      <v-text-field
+        v-model="namepet"
+        :error-messages="namepetErrors"
+        :counter="25"
+        label="Nombre de la mascota"
+        required
+        @input="$v.namepet.$touch()"
+        @blur="$v.namepet.$touch()"
+      ></v-text-field>
+      <v-select
+        v-model="select"
+        :items="items"
+        :error-messages="selectErrors"
+        label="Mascota"
+        required
+        @change="$v.select.$touch()"
+        @blur="$v.select.$touch()"
+      ></v-select>
+      <v-select
+        v-model="select2"
+        :items2="items2"
+        :error-messages="select2Errors"
+        label="Género"
+        required
+        @change="$v.select2.$touch()"
+        @blur="$v.select2.$touch()"
+      ></v-select>
+      <v-text-field
+        v-model="vacuna"
+        :counter="30"
+        label="Vacuna"
+        required
+        @input="$v.vacuna.$touch()"
+        @blur="$v.vacuna.$touch()"
+      ></v-text-field>
+      <v-checkbox
+        v-model="checkbox"
+        :error-messages="checkboxErrors"
+        label="¿Estas de acuerdo con está información suministrada ?"
+        required
+        @change="$v.checkbox.$touch()"
+        @blur="$v.checkbox.$touch()"
+      ></v-checkbox>
 
-    <v-btn id="boton1" class="mr-4" @click="submit"> subir </v-btn>
-    <v-btn id="boton2" @click="clear"> limpiar </v-btn>
-  </form>
-</v-card>
+      <v-btn
+        id="boton1"
+        class="mr-4"
+        color="green"
+        large
+        block
+        dark
+        @click="submit"
+      >
+        subir
+      </v-btn>
+      <v-btn id="boton2" color="grey" large block dark @click="clear">
+        limpiar
+      </v-btn>
+    </form>
+  </v-card>
 </template>
 
 <script>
@@ -173,17 +185,24 @@ export default {
 </script>
 
 <style>
+
 #Tabla {
+  
   margin-left: 20vw;
   margin-right: 20vw;
-  margin-bottom: 4vh;
-  outline-color: blue;
+  margin-bottom: 2vh;
+  margin-top: 1vh;
+  
 }
-#boton1{
+#boton1 {
   margin-bottom: 2%;
 }
 
-#boton2{
-  margin-bottom: 2%;
+#boton2 {
+  margin-bottom: 5%;
+}
+
+h3{
+  color: #00994c;
 }
 </style>
