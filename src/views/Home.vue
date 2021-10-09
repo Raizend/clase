@@ -4,18 +4,17 @@
     
     <v-row align="center" justify="end">
 
-      <v-btn color="#404040"  rounded  @click="login"
-        ><h3>Iniciar Sesión</h3></v-btn
-      >
-      <v-btn color="#404040" rounded @click="registro"
-        ><h3>Registrar</h3></v-btn
-      >
+      <v-btn color="#404040"  rounded  @click="login" class="white--text">
+        <h3>Iniciar Sesión</h3>
+      </v-btn>
+      <v-btn color="#404040" rounded @click="registro" class="white--text">
+        <h3>Registrar</h3>
+      </v-btn>
     </v-row>
 
     <noticias />
     <servicios />
     <equipo />
-
     <peipagina />
   </div>
 </template>
