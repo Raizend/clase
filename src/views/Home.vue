@@ -1,12 +1,12 @@
 <template>
   <div>
-    <!--Botones de inicion y registrar--->
+    <!--Botones de inicio sesion y registrar--->
     
     <v-row align="center" justify="end">
-
       <v-btn color="grey darken-3" rounded  @click="login" class="white--text">
         <h3>Iniciar Sesión</h3>
       </v-btn>
+      
       <v-btn color="grey darken-3" rounded @click="registro" class="white--text">
         <h3>Registrar</h3>
       </v-btn>

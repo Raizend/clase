@@ -15,14 +15,14 @@
           <v-col cols="6" sm="6" md="6">
             <v-text-field
               v-model="first"
-              label="Primer Nombre"
-              placeholder="Primer nombre "
+              label="Nombres"
+              placeholder="nombres"
               filled
               rounded
               dense
             ></v-text-field>
           </v-col>
-
+          <!--
           <v-col cols="12" sm="6" md="6">
             <v-text-field
               v-model="last"
@@ -33,20 +33,19 @@
               dense
             ></v-text-field>
           </v-col>
-        </v-row>
+          -->
 
-        <v-row>
           <v-col cols="12" sm="6" md="6">
             <v-text-field
               v-model="first"
-              label="Primer Apellido"
-              placeholder="Primer apellido "
+              label="Apellidos"
+              placeholder="Apellidos "
               filled
               rounded
               dense
             ></v-text-field>
           </v-col>
-
+          <!--
           <v-col cols="12" sm="6" md="6">
             <v-text-field
               v-model="last"
@@ -57,8 +56,9 @@
               dense
             ></v-text-field>
           </v-col>
+          -->
         </v-row>
-
+        
         <v-row>
           <v-col cols="12" sm="6" md="6">
             <v-select
@@ -185,9 +185,8 @@ export default {
   data: () => ({
     items: [
       "Cédula de ciudadania",
-      "Tarjeta de identidad",
       "Cédula de extranjeria",
-      "Registro Civil",
+      
     ],
   }),
 
