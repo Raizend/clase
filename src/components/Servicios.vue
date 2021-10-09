@@ -32,10 +32,10 @@
                     height="100px"
                   ></v-img>
 
-                  <v-card-title> Estadisticas </v-card-title>
+                  <v-card-title> ¡Registrate aquí!</v-card-title>
 
                   <v-card-actions>
-                    <v-btn x-large block color="#4DB6AC" >
+                    <v-btn x-large block color="#4DB6AC" @click="tablaregistro" >
                       Quiero saber más!
                     </v-btn>
                   </v-card-actions>
@@ -72,6 +72,13 @@ export default {
   data: () => ({
     show: false,
   }),
+  methods:{
+    tablaregistro(){
+            console.log("Verificando credenciales");
+            //Redirigir al registro
+            this.$router.push('/tablaregistro');
+        },
+  }
 };
 </script>
 
