@@ -1,7 +1,7 @@
 <template>
   <v-card id="card" class="mx-auto" max-width="1000">
     <v-img
-      src=" https://static.vecteezy.com/system/resources/previews/000/110/116/original/national-pet-week-dog-vectors.jpg"
+      src="https://media.istockphoto.com/photos/youngogs-and-cats-above-grey-banner-picture-id1131381748?b=1&k=20&m=1131381748&s=170667a&w=0&h=gV3De1A9IfKFRD0rGYKdcrioPQTxZypG49edl8tGKIM="
       height="270px"
     ></v-img>
 
