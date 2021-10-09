@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black">Conoce nuestro equipo de trabajo</h1> </v-card>
+        <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black" id="titulo4">Conoce nuestro equipo de trabajo</h1> </v-card>
         <div id="team">
             
             <v-card color="#CCE5FF">
@@ -267,5 +267,8 @@ export default {
 <style>
 #team{
     padding-top: 2%;
+}
+#titulo4{
+    color:white;
 }
 </style>

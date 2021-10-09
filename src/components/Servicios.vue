@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black">Información de tu interés</h1> </v-card>
+    <v-card color="#26A69A" flat class="text-center"> <h1 class="font-weight-black" id="titulo1">Información de tu interés</h1> </v-card>
     <div id="services">
       <v-card height="300" color="#CCE5FF">
         <v-responsive :aspect-ratio="16 / 9">
@@ -18,7 +18,7 @@
                   <v-card-title > Tipos de vacunas </v-card-title>
 
                   <v-card-actions>
-                    <v-btn x-large block color="#4DB6AC" >
+                    <v-btn rounded x-large block color="#4DB6AC" >
                       Quiero saber más!
                     </v-btn>
                   </v-card-actions>
@@ -35,7 +35,7 @@
                   <v-card-title> ¡Registrate aquí!</v-card-title>
 
                   <v-card-actions>
-                    <v-btn x-large block color="#4DB6AC" @click="tablaregistro" >
+                    <v-btn rounded x-large block color="#4DB6AC" @click="tablaregistro" id="titulo2">
                       Quiero saber más!
                     </v-btn>
                   </v-card-actions>
@@ -52,7 +52,7 @@
                   <v-card-title> Información de tu interés </v-card-title>
 
                   <v-card-actions>
-                    <v-btn x-large block color="#4DB6AC">
+                    <v-btn rounded x-large block color="#4DB6AC">
                       Quiero saber más!
                     </v-btn>
                   </v-card-actions>
@@ -85,5 +85,14 @@ export default {
 <style>
 #services {
   padding-top: 2%;
+}
+#titulo1 {
+  color: white;
+}
+#titulo2 {
+  color: white;
+}
+#titulo3 {
+  color: white;
 }
 </style>
