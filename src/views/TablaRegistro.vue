@@ -1,5 +1,5 @@
 <template>
-  <div>git 
+  <div>
         <certificado />
   </div>
 </template>
