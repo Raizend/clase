@@ -203,6 +203,7 @@ export default {
 }
 
 h3{
+  text-anchor: middle;
   color: #00994c;
 }
 </style>
