@@ -34,7 +34,7 @@
                   ></v-img>
                   <v-card-title> Haz tu certificado de vacunación! </v-card-title>
                   <v-card-actions>
-                    <v-btn rounded outlined x-large color="#4DB6AC" @click="tablaregistro" id="titulo2">
+                    <v-btn rounded outlined x-large color="#4DB6AC" @click="descargar" id="titulo2">
                       Descargar!
                     </v-btn>
                   </v-card-actions>
@@ -72,11 +72,11 @@ export default {
     show: false,
   }),
   methods:{
-    tablaregistro(){
-            console.log("Verificando credenciales");
-            //Redirigir al registro
-            this.$router.push('/tablaregistro');
-        },
+      descargar(){
+        console.log("Verificando credenciales");
+        //Redirigir al registro
+        this.$router.push('/mascota');
+      },
   }
 };
 </script>

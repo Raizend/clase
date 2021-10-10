@@ -1,13 +1,36 @@
 <template>
+  <div>
   <v-card id="card" class="mx-auto" max-width="1000">
-    <v-img
+    <!--<v-img
       src="https://media.istockphoto.com/photos/youngogs-and-cats-above-grey-banner-picture-id1131381748?b=1&k=20&m=1131381748&s=170667a&w=0&h=gV3De1A9IfKFRD0rGYKdcrioPQTxZypG49edl8tGKIM="
-      height="270px"
-    ></v-img>
+      height="270px">
+    </v-img>-->
 
-    <v-card-title id="card-title" class="text-h4 text--primary" >
-     <h3>Certificado y registro </h3>
-    </v-card-title>
+    <!---Menu-->
+    <v-toolbar elevation="8">
+      <h2>Certificado y Registro </h2>
+      <v-spacer></v-spacer>
+
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="green"
+              dark
+              v-bind="attrs"
+              v-on="on">
+                Menu
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="punto in puntos"
+              :key="punto.text" router :to="punto.route">
+              <v-list-item-title>{{ punto.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+    </v-toolbar>
 
     <form id="Tabla">
       <v-text-field
@@ -87,6 +110,7 @@
       </v-btn>
     </form>
   </v-card>
+  </div>
 </template>
 
 <script>
@@ -120,6 +144,12 @@ export default {
     checkbox: false,
     propietario:"",
     cedulapropietario:"",
+
+    puntos: [
+        { title: 'Usuarios', route: '/tablaVete' },
+        { title: 'Regintro Mascota', route: '/tablaMasco' },
+      ],
+
   }),
 
   computed: {
@@ -191,8 +221,9 @@ export default {
   margin-bottom: 5%;
 }
 
-h3{
+h2{
   text-anchor: middle;
   color: #00994c;
+  text-align: center;
 }
 </style>

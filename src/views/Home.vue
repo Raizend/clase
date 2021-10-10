@@ -1,7 +1,6 @@
 <template>
   <div>
     <!--Botones de inicio sesion y registrar--->
-    
     <v-row align="center" justify="end">
       <v-btn color="grey darken-3" rounded  @click="login" class="white--text">
         <h3>Iniciar Sesión</h3>

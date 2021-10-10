@@ -42,6 +42,18 @@ const routes = [
     component:()=> import('../views/Mascota.vue')
 
   },
+  {
+    path: '/tablaVete',
+    name:'TablaVete',
+    component:()=> import('../components/TablaVeterinario.vue')
+
+  },
+  {
+    path: '/tablaMasco',
+    name:'TablaMasco',
+    component:()=> import('../components/TablaMascota.vue')
+
+  },
 
 ]
 
