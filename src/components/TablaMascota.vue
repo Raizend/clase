@@ -14,11 +14,22 @@
                 <h3>Regresar al Formulario</h3>
             </v-btn>
         </v-toolbar>
+
+
+        
     </v-container>
 </template>
 
 <script>
 export default {
+
+    methods: {
+    formulario() {
+        //Redirigir al formulario
+        this.$router.push("/mascota");
+        },
+    },
+
 
 }
 </script>

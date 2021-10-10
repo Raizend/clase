@@ -13,19 +13,20 @@
             <!----Cabecera de la tabla---->
             <thead>
                 <tr>
-                <th class="text-center">Nombres</th>
-                <th class="text-center">Apellidos</th>
-                <th class="text-center">Tipo_Doc</th>
-                <th class="text-center">Numero_Doc</th>
-                <th class="text-center">Teléfono</th>
-                <th class="text-center">Email</th>
-                <th class="text-center">Contraseña</th>
-                <th class="text-center">Confi_contraseña</th>
+                    <th class="text-center">Nombres</th>
+                    <th class="text-center">Apellidos</th>
+                    <th class="text-center">Tipo_Doc</th>
+                    <th class="text-center">Numero_Doc</th>
+                    <th class="text-center">Teléfono</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Contraseña</th>
+                    <th class="text-center">Confi_contraseña</th>
+                    <th class="text-center">Aciones</th>
                 </tr>
             </thead>
             <!-----Cuerpo de la tabla----->
             <tbody>
-                <tr v-for="item in personas" :key="item._id">
+                <tr v-for="item in veterinarios" :key="item._id">
                 <td>{{ item.nombres }}</td>
                 <td>{{ item.apellidos }}</td>
                 <td>{{ item.tipoDoc}}</td>
@@ -56,12 +57,28 @@ import store from "../store/index.js";
 
 export default {
 
+    created: () => {
+        
+        //realiza solicitud get al backend
+        store.dispatch("cargarVeterinarios");
+        
+    },
+
+    //Propiedad Computada
+    computed: {
+        veterinarios: ()=>{
+            return store.state.veterinarios;
+        }
+
+
+    },
+
     methods: {
     formulario() {
-      //Redirigir al formulario
-      this.$router.push("/mascota");
+        //Redirigir al formulario
+        this.$router.push("/mascota");
+        },
     },
-  },
 
 }
 </script>

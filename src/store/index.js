@@ -10,7 +10,7 @@ export default new Vuex.Store({
   mutations: {
     
     setVeterinarios(state, payload) {
-      state.personas = payload;
+      state.veterinarios = payload;
     },
   },
   actions: {
@@ -21,6 +21,16 @@ export default new Vuex.Store({
       commit('setVeterinarios', data);
       console.table(data);
     },
+
+    async crearPersona({commit}, objPersona){
+      const peticion = await fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application-json'
+        },
+        body: JSON.stringify(objPersona)
+      })
+    }
 
   },
   modules: {
