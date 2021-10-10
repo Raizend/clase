@@ -210,7 +210,7 @@ export default {
     tablaregistro() {
       console.log("Verificando credenciales");
       //Redirigir al home
-      this.$router.push("/tablaregistro");
+      this.$router.push("/mascota");
     },
   },
 };

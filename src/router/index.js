@@ -32,21 +32,15 @@ const routes = [
     component: ()=> import('../views/Contrasenia.vue')
   },
   {
-    path: '/registro',
-    name: 'Registro',
-    component: ()=> import('../views/Registro.vue')
+    path: '/veterinario',
+    name: 'Veterianrio',
+    component: ()=> import('../views/Veterinario.vue')
   },
   {
-    path: '/tablaregistro',
-    name:'TablaRegistro',
-    component:()=> import('../views/TablaRegistro.vue')
+    path: '/mascota',
+    name:'Mascota',
+    component:()=> import('../views/Mascota.vue')
 
-  },
-
-  {
-    path: '/home',
-    name: 'Home',
-    component: ()=> import('../views/Home.vue')
   },
 
 ]

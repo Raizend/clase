@@ -25,12 +25,17 @@
       ></v-text-field>
       <v-text-field
         v-model="cedulapropietario"
-        label="Cédula del propietario"
+        label="Cédula del dueño"
+      ></v-text-field>
+      <v-text-field
+        v-model="telfonoDueño"
+        label="Telefono del dueño"
+        counter="25"
       ></v-text-field>
       <v-text-field
         v-model="email"
         :error-messages="emailErrors"
-        label="E-mail del dueño de la mascota"
+        label="E-mail del dueño"
         required
         @input="$v.email.$touch()"
         @blur="$v.email.$touch()"

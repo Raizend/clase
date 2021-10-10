@@ -80,12 +80,12 @@ export default {
         login(){
             console.log("Verificando credenciales");
             //Redirigir al Tabla de Registro
-            this.$router.push('/tablaregistro');
+            this.$router.push('/mascota');
         },
         registro(){
             console.log("Verificando credenciales");
             //Redirigir al registro
-            this.$router.push('/registro');
+            this.$router.push('/veterinario');
         },
         contrasenia(){
             console.log("Verificando credenciales");

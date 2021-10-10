@@ -42,7 +42,7 @@ export default {
     registro() {
       console.log("Verificando credenciales");
       //Redirigir al registro
-      this.$router.push("/registro");
+      this.$router.push("/veterinario");
     },
   },
 };
