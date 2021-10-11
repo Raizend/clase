@@ -151,7 +151,7 @@
             x-large
             block
             dark
-            @click="tablaregistro"
+            v-on:click="registro"
           >
             Registrar
           </v-btn>
@@ -181,6 +181,8 @@
 </template>
 
 <script>
+import store from "../store/index.js";
+
 export default {
   data: () => ({
     items: [
@@ -198,19 +200,31 @@ export default {
 
   methods: {
     login() {
-      console.log("Verificando credenciales");
+      //console.log("Verificando credenciales");
       //Redirigir al home
       this.$router.push("/login");
     },
     home() {
-      console.log("Verificando credenciales");
+      //console.log("Verificando credenciales");
       //Redirigir al home
       this.$router.push("/home");
     },
-    tablaregistro() {
-      console.log("Verificando credenciales");
-      //Redirigir al home
-      this.$router.push("/mascota");
+    registro() {
+      
+      let objVeterinario = {
+        nombres:"SARA",
+        apellidos:"URIBE",
+        tipoDoc:"",
+        numDoc:"",
+        telefono:"",
+        email:"",
+        password:"",
+        confiPass:"",
+      };
+      //Crear Veterinarios: realiza solicitud post al backend
+        store.dispatch("crearVeterinario", objVeterinario);
+      
+      this.$router.push("/tablaVete");
     },
   },
 };

@@ -58,8 +58,8 @@ import store from "../store/index.js";
 export default {
 
     created: () => {
-        
-        //realiza solicitud get al backend
+
+        //Cargar Veterinarios: realiza solicitud get al backend
         store.dispatch("cargarVeterinarios");
         
     },
@@ -70,14 +70,23 @@ export default {
             return store.state.veterinarios;
         }
 
-
     },
 
     methods: {
-    formulario() {
-        //Redirigir al formulario
-        this.$router.push("/mascota");
+
+        eliminar(id){
+            console.log("eliminar=>", id)
+            let obj = {id};
+            store.dispatch("eliminarVeterinario", obj).then(()=>{
+                //realiza solicitud get al backend
+                store.dispatch("cargarVeterinarios");
+            })
         },
+
+        formulario() {
+            //Redirigir al formulario
+            this.$router.push("/mascota");
+            },
     },
 
 }

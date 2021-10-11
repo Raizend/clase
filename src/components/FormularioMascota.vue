@@ -8,7 +8,7 @@
 
     <!---Menu-->
     <v-toolbar elevation="8">
-      <h2>Certificado y Registro </h2>
+      <h2>Certificado y Registro de Mascotas </h2>
       <v-spacer></v-spacer>
 
         <v-menu offset-y>
@@ -51,9 +51,13 @@
         label="Cédula del dueño"
       ></v-text-field>
       <v-text-field
-        v-model="telfonoDueño"
+        v-model="telfono"
+        :error-messages="telefonoErrors"
         label="Telefono del dueño"
         counter="25"
+        required
+        @input="$v.telfono.$touch()"
+        @blur="$v.telfono.$touch()"
       ></v-text-field>
       <v-text-field
         v-model="email"
@@ -71,10 +75,7 @@
         v-model="select"
         :items="items"
         :error-messages="selectErrors"
-        label="Mascota"
-        required
-        @change="$v.select.$touch()"
-        @blur="$v.select.$touch()"
+        label="Tipo de Mascota"
       ></v-select>
       <v-select
         v-model="select2"
@@ -83,11 +84,19 @@
       ></v-select>
       <v-text-field
         v-model="fecha"
+        :error-messages="fechaErrors"
         label="Fecha de la Vacuna"
+        required
+        @change="$v.fecha.$touch()"
+        @blur="$v.fecha.$touch()"
       ></v-text-field>
       <v-text-field
         v-model="vacuna"
+        :error-messages="vacunaErrors"
         label="Vacuna"
+        required
+        @input="$v.vacuna.$touch()"
+        @blur="$v.vacuna.$touch()"
       ></v-text-field>
       <v-checkbox
         v-model="checkbox"
@@ -105,9 +114,9 @@
         large
         block
         dark
-        @click="submit"
+        @click="registro"
       >
-        subir
+        Registrar
       </v-btn>
       <v-btn id="boton2" color="grey" large block dark @click="clear">
         limpiar
@@ -118,6 +127,7 @@
 </template>
 
 <script>
+import store from "../store/index.js";
 import { validationMixin } from "vuelidate";
 import { required, maxLength, email } from "vuelidate/lib/validators";
 
@@ -127,7 +137,9 @@ export default {
   validations: {
     name: { required, maxLength: maxLength(25) },
     vacuna: { required },
+    fecha: { required },
     email: { required, email },
+    telefono: { required },
     select: { required },
     checkbox: {
       checked(val) {
@@ -144,7 +156,7 @@ export default {
     select2: null,
     items: ["Perro", "Gato", "Otro"],
     genero: ['Macho', 'Hembra'],
-    telfonoDueño: "",
+    telfono: "",
     fecha: "",
     vacuna: "",
     checkbox: false,
@@ -166,10 +178,16 @@ export default {
         errors.push("Debes de estar de acuerdo para continuar");
       return errors;
     },
-    selectErrors() {
+    vacunaErrors() {
       const errors = [];
-      if (!this.$v.select.$dirty) return errors;
-      !this.$v.select.required && errors.push("Mascota es requerido");
+      if (!this.$v.vacuna.$dirty) return errors;
+      !this.$v.vacuna.required && errors.push("Vacuna es requerido");
+      return errors;
+    },
+    fechaErrors() {
+      const errors = [];
+      if (!this.$v.fecha.$dirty) return errors;
+      !this.$v.fecha.required && errors.push("Vacuna es requerido");
       return errors;
     },
     nameErrors() {
@@ -184,21 +202,43 @@ export default {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
       !this.$v.email.email && errors.push("Must be valid e-mail");
-      !this.$v.email.required && errors.push("E-mail is required");
+      !this.$v.email.required && errors.push("E-mail es requerido");
+      return errors;
+    },
+    telefonoErrors() {
+      const errors = [];
+      if (!this.$v.telefono.$dirty) return errors;
+      !this.$v.telefono.required && errors.push("Telefono es requerido");
       return errors;
     },
   },
 
   methods: {
-    submit() {
+    registro() {
       this.$v.$touch();
+
+      let objmascota = {
+        veterinario:"",
+        nombreDueño:"",
+        ident_dueño:"",
+        tel_dueño:"",
+        email_dueño:"",
+        nombreMascota:"",
+        tipo:"",
+        genero:"",
+        fecha_vacuna:"",
+        vacuna:"",
+      };
+      //Crear Mascotas: realiza solicitud post al backend
+        store.dispatch("crearMascota", objmascota);
+
     },
     clear() {
       this.$v.$reset();
       this.name = "";
       this.namepet = "";
       this.email = "";
-      this.telfonoDueño = "";
+      this.telfono = "";
       this.fecha = "";
       this.select = null;
       this.select2 = null;

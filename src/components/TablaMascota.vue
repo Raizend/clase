@@ -76,14 +76,23 @@ export default {
             return store.state.mascotas;
         }
 
-
     },
 
     methods: {
-    formulario() {
-        //Redirigir al formulario
-        this.$router.push("/mascota");
+
+        eliminar(id){
+            console.log("eliminar=>", id)
+            let obj = {id};
+            store.dispatch("eliminarMascota", obj).then(()=>{
+                //realiza solicitud get al backend
+                store.dispatch("cargarMascotas");
+            })
         },
+
+        formulario() {
+            //Redirigir al formulario
+            this.$router.push("/mascota");
+            },
     },
 
 
