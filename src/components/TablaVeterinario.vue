@@ -11,7 +11,7 @@
         <v-simple-table>
             <template v-slot:default>
             <!----Cabecera de la tabla---->
-            <thead>
+            <thead class="font-italic">
                 <tr>
                     <th class="text-center">Nombres</th>
                     <th class="text-center">Apellidos</th>
@@ -37,10 +37,10 @@
                 <td>{{ item.confiPass}}</td>
                 <!----Columna de acciones--->
                 <td>
-                    <v-btn class="ma-2" outlined color="indigo">
+                    <v-btn class="ma-2"  x-small outlined color="indigo">
                     Actualizar
                     </v-btn>
-                    <v-btn class="ma-2" outlined color="error" v-on:click="eliminar(item._id)"><!---@click-->
+                    <v-btn class="ma-2" x-small outlined color="error" v-on:click="eliminar(item._id)"><!---@click-->
                     Eliminar
                     </v-btn>
                 </td>

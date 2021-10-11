@@ -82,6 +82,10 @@
         label="Género"
       ></v-select>
       <v-text-field
+        v-model="fecha"
+        label="Fecha de la Vacuna"
+      ></v-text-field>
+      <v-text-field
         v-model="vacuna"
         label="Vacuna"
       ></v-text-field>
@@ -140,6 +144,8 @@ export default {
     select2: null,
     items: ["Perro", "Gato", "Otro"],
     genero: ['Macho', 'Hembra'],
+    telfonoDueño: "",
+    fecha: "",
     vacuna: "",
     checkbox: false,
     propietario:"",
@@ -192,6 +198,8 @@ export default {
       this.name = "";
       this.namepet = "";
       this.email = "";
+      this.telfonoDueño = "";
+      this.fecha = "";
       this.select = null;
       this.select2 = null;
       this.checkbox = false;

@@ -5,12 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    veterinarios: []
+    veterinarios: [],
+    mascotas: []
   },
   mutations: {
     
     setVeterinarios(state, payload) {
       state.veterinarios = payload;
+    },
+    setMascotas(state, payload) {
+      state.mascotas = payload;
     },
   },
   actions: {
@@ -22,13 +26,20 @@ export default new Vuex.Store({
       console.table(data);
     },
 
-    async crearPersona({commit}, objPersona){
-      const peticion = await fetch('http://localhost:3000/users', {
+    async cargarMascotas({ commit }) {
+      const peticion = await fetch('http://localhost:3000/mascota');
+      const data = await peticion.json();
+      commit('setMascotas', data);
+      console.table(data);
+    },
+
+    async crearVeterinario({commit}, objVeterinario){
+      const peticion = await fetch('http://localhost:3000/admin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application-json'
         },
-        body: JSON.stringify(objPersona)
+        body: JSON.stringify(objVeterinario)
       })
     }
 
