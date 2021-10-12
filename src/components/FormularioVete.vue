@@ -1,160 +1,150 @@
 <template>
+  <v-container>
   <v-card id="card-sign" class="mx-auto" max-width="1000" height="1000" :elevation="30">
-    <v-img height="300px" class="green--text align-end"
-      src="https://prestoncountryclubforpets.com/sites/default/files/banner/dogs-cats-banner.jpg"
+    <v-img height="300px" class="secundary--text align-end"
+      src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/2020-12/purina-consulta-veterinaria-para-mascotas-lo-que-debes-saber.jpg?itok=-YoxixyF"
       
     >
     <v-card-title ><h1>Formulario de Registro</h1></v-card-title>
     </v-img>
 
     <!--<h1 class="text-center" style="color: #00994c"></h1>-->
+  
+    <v-form ref="form" v-model="valid" lazy-validation>
+      <!-----FILA 1----->
+      <v-row>
+        <!-----COLUMNA 1----->
+        <v-col cols="6" sm="6" md="6">
+          <v-text-field
+            v-model="nombres"
+            :counter="30"
+            :rules="rules"
+            label="Nombres"
+            placeholder="nombres"
+            required
+            filled
+            dense
+            rounded
+          ></v-text-field>
+        </v-col>
+        <!-----COLUMNA 2----->
+        <v-col cols="6" sm="6" md="6">
+          <v-text-field
+            v-model="apellidos"
+            :counter="30"
+            :rules="rules"
+            label="Apellidos"
+            required
+            filled
+            rounded
+            dense
+          ></v-text-field>
+        </v-col>
+      </v-row>
 
-    <v-form id="formulario">
-      <v-container>
-        <v-row>
-          <v-col cols="6" sm="6" md="6">
-            <v-text-field
-              v-model="first"
-              label="Nombres"
-              placeholder="nombres"
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-          <!--
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="last"
-              label="Segundo Nombre (Opcional)"
-              placeholder="Segundo nombre (Opcional)"
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-          -->
+      <!-----FILA 2----->
+      <v-row>
+        <!-----COLUMNA 1----->
+        <v-col cols="6" sm="6" md="6">
+          <v-select
+            v-model="tipoDoc"
+            :items="tipocc"
+            label="Tipo de documento"
+            filled
+            rounded
+            dense
+          ></v-select>
+        </v-col>
+        <!-----COLUMNA 2----->
+        <v-col cols="6" sm="6" md="6">
+          <v-text-field
+            v-model="numDoc"
+            :counter="30"
+            :rules="rules"
+            label="Numero de Identificacion"
+            required
+            filled
+            rounded
+            dense
+          ></v-text-field>
+        </v-col>
+      </v-row>
 
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="first"
-              label="Apellidos"
-              placeholder="Apellidos "
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-          <!--
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="last"
-              label="Segundo Apellido (Opcional)"
-              placeholder="Segundo apellido (Opcional)"
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-          -->
-        </v-row>
-        
-        <v-row>
-          <v-col cols="12" sm="6" md="6">
-            <v-select
-              :items="items"
-              v-model="first"
-              label="Tipo de documento"
-              filled
-              rounded
-              dense
-            ></v-select>
-          </v-col>
+      <!-----FILA 3----->
+      <v-row>
+        <!-----COLUMNA 1----->
+        <v-col cols="6" sm="6" md="6">
+          <v-text-field
+            v-model="telefono"
+            :counter="30"
+            :rules="rules"
+            label="Teléfono"
+            required
+            filled
+            rounded
+            dense
+            type="number"
+          ></v-text-field>
+        </v-col>
+        <!-----COLUMNA 2----->
+        <v-col cols="6" sm="6" md="6">
+          <v-text-field
+            v-model="email"
+            :counter="30"
+            :rules="rules"
+            label="E-mail"
+            required
+            filled
+            rounded
+            dense
+          ></v-text-field>
+        </v-col>
+      </v-row>
 
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="last"
-              label="Número de documento"
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-        </v-row>
-
-        <v-row>
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="first"
-              label="Teléfono celular o fijo (Opcional)"
-              placeholder="Teléfono celular o fijo "
-              filled
-              rounded
-              dense
-              type="tel"
-            ></v-text-field>
-          </v-col>
-
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="last"
-              label="Correo electrónico (Opcional)"
-              placeholder="Correo electrónico (Opcional)"
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="first"
-              label="Crear contraseña"
-              type="password"
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-
-          <v-col cols="12" sm="6" md="6">
-            <v-text-field
-              v-model="last"
-              label="Confirmar contraseña"
-              type="password"
-              filled
-              rounded
-              dense
-            ></v-text-field>
-          </v-col>
-        </v-row>
-      </v-container>
+      <!-----FILA 4----->
+      <v-row>
+        <!-----COLUMNA 1----->
+        <v-col cols="6" sm="6" md="6">
+          <v-text-field
+            v-model="password"
+            :counter="30"
+            :rules="rules"
+            label="Contraseña"
+            type="password"
+            required
+            filled
+            rounded
+            dense
+          ></v-text-field>
+        </v-col>
+        <!-----COLUMNA 2----->
+        <v-col cols="6" sm="6" md="6">
+          <v-text-field
+            v-model="confiPass"
+            :counter="30"
+            :rules="rules"
+            label="Confirma contraseña"
+            type="password"
+            required
+            filled
+            rounded
+            dense
+          ></v-text-field>
+        </v-col>
+      </v-row>
     </v-form>
 
-    <div class="text-center">
-      <v-dialog v-model="dialog" width="600">
-        <br />
-        <br />
+      <br />
 
-        <v-card>
-          <v-divider></v-divider>
-        </v-card>
-      </v-dialog>
-    </div>
     <v-card-actions>
       <v-row align="center">
         <v-col class="d-flex" cols="12" sm="12">
-          <v-btn
-            class="rounded"
-            color="green"
-            x-large
-            block
-            dark
-            v-on:click="registro"
-          >
+          
+          <v-btn :disabled="!valid" color="success" 
+          class="mr-4" v-on:click="registrar" block x-large>
             Registrar
           </v-btn>
+
         </v-col>
       
         <v-col cols="12" sm="6"
@@ -162,7 +152,7 @@
             color="#404040"
             x-large
             block
-            dark @click="home">
+            dark v-on:click="home">
             Página Principal
           </v-btn>
         </v-col>
@@ -171,77 +161,83 @@
             color="#404040"
             x-large
             block
-            dark @click="login">
+            dark v-on:click="login">
             Iniciar Sesión
           </v-btn>
         </v-col>
       </v-row>
     </v-card-actions>
+
   </v-card>
+  </v-container>
 </template>
 
 <script>
 import store from "../store/index.js";
 
 export default {
-  data: () => ({
-    items: [
-      "Cédula de ciudadania",
-      "Cédula de extranjeria",
-      
-    ],
-  }),
+  data: () => {
+    return {
+      valid: true,
+      nombres: "",
+      apellidos: "",
+      tipoDoc: "",
+      numDoc: "",
+      telefono: "",
+      email: "",
+      password: "",
+      confiPass: "",
 
-  //data() {
-  //  return {
-  //    dialog: false,
-  // };
-  //},
+      tipocc: [
+      "CC",
+      "CE",
+      ],
 
+      rules: [
+        (v) => !!v || "Este campo es requerido",
+        (v) => (v && v.length <= 50) || "Máximo 50 caracteres",
+      ],
+    
+      select: null,
+      items: ["Item 1", "Item 2", "Item 3", "Item 4"],
+      checkbox: false,
+    };
+  },
   methods: {
+    registrar() {
+      if (this.$refs.form.validate()) {
+        let objVeterinario = {
+          nombres: this.nombres,
+          apellidos: this.apellidos,
+          tipoDoc: this.tipoDoc,
+          numDoc: this.numDoc,
+          telefono: this.telefono,
+          email: this.email,
+          password: this.password,
+          confiPass: this.confiPass,
+        };
+        //Crear una persona; realiza solicitud post al backend
+        store.dispatch("crearVeterinario", objVeterinario).then(() => {
+          //Limpia el formulario cuando se registra una persona
+          this.$refs.form.reset();
+        });
+      }
+    },
+    
     login() {
-      //console.log("Verificando credenciales");
       //Redirigir al home
       this.$router.push("/login");
     },
     home() {
-      //console.log("Verificando credenciales");
       //Redirigir al home
       this.$router.push("/home");
     },
-    registro() {
-      
-      let objVeterinario = {
-        nombres:"SARA",
-        apellidos:"URIBE",
-        tipoDoc:"",
-        numDoc:"",
-        telefono:"",
-        email:"",
-        password:"",
-        confiPass:"",
-      };
-      //Crear Veterinarios: realiza solicitud post al backend
-        store.dispatch("crearVeterinario", objVeterinario);
-      
-      this.$router.push("/tablaVete");
-    },
+
   },
 };
 </script>
 
 <style>
-#card-sign {
-  margin-top: 5rem;
-  margin-block-end: 5rem;
-  border-color: brown;
-}
-
-#formulario {
-  border-color: brown;
-}
-
-#card-title {
-  color: rgb(22, 6, 37);
-}
 </style>
+
+  

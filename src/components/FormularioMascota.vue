@@ -1,10 +1,11 @@
 <template>
   <div>
+    
   <v-card id="card" class="mx-auto" max-width="1000">
-    <!--<v-img
-      src="https://media.istockphoto.com/photos/youngogs-and-cats-above-grey-banner-picture-id1131381748?b=1&k=20&m=1131381748&s=170667a&w=0&h=gV3De1A9IfKFRD0rGYKdcrioPQTxZypG49edl8tGKIM="
+    <v-img
+      src="https://prestoncountryclubforpets.com/sites/default/files/banner/dogs-cats-banner.jpg"
       height="270px">
-    </v-img>-->
+    </v-img>
 
     <!---Menu-->
     <v-toolbar elevation="8">

@@ -18,7 +18,7 @@ export default new Vuex.Store({
     },
     //Crear usuarios
     pushVeterinario(state, payload){
-      state.personas.push(payload);
+      state.veterinarios.push(payload);
     }
 
   },
