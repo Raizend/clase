@@ -18,12 +18,22 @@
             label="Número de documento"
             placeholder="Número de documento"
             outlined
+            v-model="numDoc"
+            :rules="rules"
+            required
+            @input="$v.numDoc.$touch()"
+            @blur="$v.numDoc.$touch()"
           ></v-text-field>
           <v-text-field
             label="Contraseña"
             placeholder="Contraseña"
             outlined
             type="password"
+            v-model="confiPass"
+            :rules="rules"
+            required
+            @input="$v.confiPass.$touch()"
+            @blur="$v.confiPass.$touch()"
           ></v-text-field>
         </v-form>
       </v-card-text>
@@ -62,7 +72,6 @@
           </v-row>
           
 
-       
       </v-card-actions>
     </v-card>
     </v-container
@@ -70,9 +79,26 @@
 </template>
 
 <script>
+import { validationMixin } from "vuelidate";
+import { required, } from "vuelidate/lib/validators";
+
+
 export default {
+    
+    mixins: [validationMixin],
+    validations: {
+    numDoc: { required },
+    confiPass: { required },
+  },
+
+
     data: ()=>{
         return{
+
+          rules: [
+            (v) => !!v || "Este campo es requerido",
+            (v) => (v && v.length <= 30) || "Máximo 50 caracteres",
+          ],
 
         }
     },
@@ -80,7 +106,9 @@ export default {
         login(){
             console.log("Verificando credenciales");
             //Redirigir al Tabla de Registro
+            this.$v.$touch();
             this.$router.push('/mascota');
+
         },
         registro(){
             console.log("Verificando credenciales");

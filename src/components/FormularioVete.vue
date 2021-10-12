@@ -136,7 +136,7 @@
 
       <br />
 
-    <v-card-actions>
+    <v-card-actions id="actions">
       <v-row align="center">
         <v-col class="d-flex" cols="12" sm="12">
           
@@ -240,6 +240,9 @@ export default {
 #tabla{
   margin-top: 5vh;
 }
-</style>
+#actions{
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
 
-  
+</style>
