@@ -19,6 +19,10 @@ export default new Vuex.Store({
     //Crear usuarios
     pushVeterinario(state, payload){
       state.veterinarios.push(payload);
+    },
+    //Crear registro de mascotas
+    pushMascota(state, payload){
+      state.mascotas.push(payload);
     }
 
   },
@@ -59,7 +63,10 @@ export default new Vuex.Store({
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(objMascota)
-      })
+      });
+      //Capturamos la mascota recién insertada
+      const data = await peticion.json();
+      commit('pushMascota', data);
     },
 
     async eliminarVeterinario({commit}, objVeterinario){

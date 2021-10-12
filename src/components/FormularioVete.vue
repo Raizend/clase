@@ -1,19 +1,22 @@
 <template>
   <v-container>
   <v-card id="card-sign" class="mx-auto" max-width="1000" height="1000" :elevation="30">
-    <v-img height="300px" class="secundary--text align-end"
+    <v-img height="300px" class="green--text align-end"
       src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/2020-12/purina-consulta-veterinaria-para-mascotas-lo-que-debes-saber.jpg?itok=-YoxixyF"
-      
     >
-    <v-card-title ><h1>Formulario de Registro</h1></v-card-title>
+      <v-card-title >
+        <h1>Formulario
+        <br>
+        De Registro
+        </h1>
+      </v-card-title>
     </v-img>
 
     <!--<h1 class="text-center" style="color: #00994c"></h1>-->
   
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form ref="form" v-model="valid" lazy-validation id="tabla">
       <!-----FILA 1----->
       <v-row>
-        <!-----COLUMNA 1----->
         <v-col cols="6" sm="6" md="6">
           <v-text-field
             v-model="nombres"
@@ -27,7 +30,7 @@
             rounded
           ></v-text-field>
         </v-col>
-        <!-----COLUMNA 2----->
+
         <v-col cols="6" sm="6" md="6">
           <v-text-field
             v-model="apellidos"
@@ -44,7 +47,6 @@
 
       <!-----FILA 2----->
       <v-row>
-        <!-----COLUMNA 1----->
         <v-col cols="6" sm="6" md="6">
           <v-select
             v-model="tipoDoc"
@@ -55,7 +57,7 @@
             dense
           ></v-select>
         </v-col>
-        <!-----COLUMNA 2----->
+
         <v-col cols="6" sm="6" md="6">
           <v-text-field
             v-model="numDoc"
@@ -72,7 +74,6 @@
 
       <!-----FILA 3----->
       <v-row>
-        <!-----COLUMNA 1----->
         <v-col cols="6" sm="6" md="6">
           <v-text-field
             v-model="telefono"
@@ -86,7 +87,7 @@
             type="number"
           ></v-text-field>
         </v-col>
-        <!-----COLUMNA 2----->
+
         <v-col cols="6" sm="6" md="6">
           <v-text-field
             v-model="email"
@@ -103,7 +104,6 @@
 
       <!-----FILA 4----->
       <v-row>
-        <!-----COLUMNA 1----->
         <v-col cols="6" sm="6" md="6">
           <v-text-field
             v-model="password"
@@ -117,7 +117,7 @@
             dense
           ></v-text-field>
         </v-col>
-        <!-----COLUMNA 2----->
+
         <v-col cols="6" sm="6" md="6">
           <v-text-field
             v-model="confiPass"
@@ -144,7 +144,6 @@
           class="mr-4" v-on:click="registrar" block x-large>
             Registrar
           </v-btn>
-
         </v-col>
       
         <v-col cols="12" sm="6"
@@ -238,6 +237,9 @@ export default {
 </script>
 
 <style>
+#tabla{
+  margin-top: 5vh;
+}
 </style>
 
   
