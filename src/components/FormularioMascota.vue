@@ -9,6 +9,14 @@
 
     <!---Menu-->
     <v-toolbar elevation="8">
+      <span>
+        <v-img
+          id="logo"
+          src="https://cdn-icons-png.flaticon.com/128/1076/1076928.png"
+          width="20%">
+        </v-img>
+      </span>
+
       <h2>Certificado y Registro de Mascotas </h2>
       <v-spacer></v-spacer>
 

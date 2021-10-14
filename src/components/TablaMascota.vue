@@ -42,8 +42,8 @@
                 <td>{{ item.vacuna}}</td>
                 <!----Columna de acciones--->
                 <td>
-                    <v-btn class="ma-2" x-small outlined color="indigo">
-                    Actualizar
+                    <v-btn class="ma-2" x-small outlined color="indigo" v-on:click="editar(item)">
+                    Editar
                     </v-btn>
                     <v-btn class="ma-2" x-small outlined color="error" v-on:click="eliminar(item._id)"><!---@click-->
                     Eliminar
@@ -87,6 +87,26 @@ export default {
                 //realiza solicitud get al backend
                 store.dispatch("cargarMascotas");
             })
+        },
+
+        editar(objmascota){
+            console.log(objmascota);
+            //emitir al padre
+            this.$emit('objMascota', objmascota);
+
+           /*var mascota = this.mascotas
+            veterinario: this.nameVete,
+            nombreDueño: this.propietario,
+            ident_dueño: this.idDueño,
+            tel_dueño: this.telfono,
+            email_dueño: this.email,
+            nombreMascota: this.namepet,
+            tipo: this.tipoPet,
+            genero: this.generoPet,
+            fecha_vacuna: this.fecha,
+            vacuna: this.vacuna,*/
+
+            this.$router.push("/mascota");
         },
 
         formulario() {

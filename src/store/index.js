@@ -23,27 +23,31 @@ export default new Vuex.Store({
     //Crear registro de mascotas
     pushMascota(state, payload){
       state.mascotas.push(payload);
+    },
+    //Actualizar mascotas
+    putMascota(state, payload){
+      state.mascotas.put(payload);
     }
 
   },
   actions: {
 
     async cargarVeterinarios({ commit }) {
-      const peticion = await fetch('http://localhost:3000/admin');
+      const peticion = await fetch('https://backend-proyecto-vacuna.herokuapp.com/admin');
       const data = await peticion.json();
       commit('setVeterinarios', data);
       //console.table(data);
     },
 
     async cargarMascotas({ commit }) {
-      const peticion = await fetch('http://localhost:3000/mascota');
+      const peticion = await fetch('https://backend-proyecto-vacuna.herokuapp.com/mascota');
       const data = await peticion.json();
       commit('setMascotas', data);
       //console.table(data);
     },
 
     async crearVeterinario({commit}, objVeterinario){
-      const peticion = await fetch('http://localhost:3000/admin',{
+      const peticion = await fetch('https://backend-proyecto-vacuna.herokuapp.com/admin',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -57,7 +61,7 @@ export default new Vuex.Store({
     },
 
     async crearMascota({commit}, objMascota){
-      const peticion = await fetch('http://localhost:3000/mascota',{
+      const peticion = await fetch('https://backend-proyecto-vacuna.herokuapp.com/mascota',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -70,7 +74,7 @@ export default new Vuex.Store({
     },
 
     async eliminarVeterinario({commit}, objVeterinario){
-        const peticion = await fetch('http://localhost:3000/admin', {
+        const peticion = await fetch('https://backend-proyecto-vacuna.herokuapp.com/admin', {
           method: 'DELETE',
           headers:{
             'Content-type': 'application/json'
@@ -79,7 +83,7 @@ export default new Vuex.Store({
         })
     },
     async eliminarMascota({commit}, objMascota){
-      const peticion = await fetch('http://localhost:3000/mascota', {
+      const peticion = await fetch('https://backend-proyecto-vacuna.herokuapp.com/mascota', {
         method: 'DELETE',
         headers:{
           'Content-type': 'application/json'
