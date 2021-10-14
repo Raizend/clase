@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-toolbar >
-            <h2>Tabla de Registro de Macotas</h2>
+            <h2>Tabla de Registro de Mascotas</h2>
             <v-spacer></v-spacer>
             <v-btn elevation="6" rounded @click="formulario">
                 <h3>Regresar al Formulario</h3>

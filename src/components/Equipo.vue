@@ -26,7 +26,7 @@
                         </v-card-title>
 
                         <v-card-subtitle>
-                        Estudiante Pograma Mision Tic 2022
+                        Estudiante Programa Mision Tic 2022
                         </v-card-subtitle>
 
                         <v-card-actions>
@@ -66,7 +66,7 @@
                         </v-card-title>
 
                         <v-card-subtitle>
-                        Estudiante Pograma Mision Tic 2022
+                        Estudiante Programa Mision Tic 2022
                         </v-card-subtitle>
 
                         <v-card-actions>
@@ -109,7 +109,7 @@
                         </v-card-title>
 
                         <v-card-subtitle>
-                        Estudiante Pograma Mision Tic 2022
+                        Estudiante Programa Mision Tic 2022
                         </v-card-subtitle>
 
                         <v-card-actions>
@@ -155,7 +155,7 @@
                         </v-card-title>
 
                         <v-card-subtitle>
-                        Estudiante Pograma Mision Tic 2022
+                        Estudiante Programa Mision Tic 2022
                         </v-card-subtitle>
 
                         <v-card-actions>
@@ -198,7 +198,7 @@
                         </v-card-title>
 
                         <v-card-subtitle>
-                        Estudiante Pograma Mision Tic 2022
+                        Estudiante Programa Mision Tic 2022
                         </v-card-subtitle>
 
                         <v-card-actions>

@@ -29,7 +29,7 @@
               <v-flex>
                 <v-card class="mx-auto" max-width="344" height="260">
                   <v-img
-                    src="https://www.diariolibre.com/binrepository/1970x1024/0c0/0d0/none/10904/WXLC/preparava-vacuna-covdi-sinovac-en-pucmm-22042021-orlando-barria-efe-16243390-20210423224222_16511082_20210531152540.jpg"
+                    src="https://image.freepik.com/free-vector/illustration-folder-with-document_53876-28502.jpg"
                     height="100px"
                   ></v-img>
                   <v-card-title> Haz tu certificado de vacunación! </v-card-title>

@@ -76,12 +76,9 @@
           <v-col cols="4" sm="4" md="4">
             <v-text-field
               v-model="telfono"
-              :error-messages="telefonoErrors"
               label="Telefono del dueño"
               counter="25"
               required
-              @input="$v.telfono.$touch()"
-              @blur="$v.telfono.$touch()"
               filled rounded
             ></v-text-field>
           </v-col>
@@ -222,7 +219,7 @@ export default {
 
     puntos: [
         { title: 'Usuarios', route: '/tablaVete' },
-        { title: 'Regintro Mascota', route: '/tablaMasco' },
+        { title: 'Registro Mascota', route: '/tablaMasco' },
       ],
 
   }),
